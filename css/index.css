@@ -13,6 +13,7 @@
     --accent:  #c0553a;   /* editorial red accent */
     --text:    #1c1a16;
     --muted:   #8a8070;
+    --shadow:  #aeaeae;
 }
 
 body {
@@ -23,23 +24,31 @@ body {
 nav {
     padding: 20px 0px;
     background: var(--charcoal);
+    font-family: "Inter", sans-serif;
 
     display: flex;
     flex-direction: row;
     gap: 20px;
     justify-content: center;
+
 }
+
 nav a{
     text-decoration: none;
     color: var(--cream);
+    text-transform: uppercase;
+    transition: color 0.5s;
+}
 
+nav a:hover {
+    color: var(--earth);
 }
 
 /* Section Header */
 
 header {
     background: var(--charcoal);
-    padding-top: 50px;
+    padding-top: 80px;
     padding-bottom: 80px;
     display: flex;
     flex-direction: column;
@@ -62,31 +71,90 @@ h1 {
 h2 {
     color: var(--deep);
     font-size: 30px;
-    border-bottom: 1px solid var(--deep);
+}
+
+/* General Style section */
+
+section {
+    padding: 80px;
+    margin-bottom: 20px; 
+    /* background: var(--slate); */
+}
+
+.sectionLine {
+    height: 3px;
+    width: 100%;
+    background: var(--earth);
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 /* Section about */
 #about {
-    padding: 80px;
-    margin-bottom: 20px;
+
 }
 
 /* Section Experience */
-#experience{
-    padding: 80px;
-    margin-bottom: 20px;
+#experience {
+
 }
 
 #experience ul {
     list-style: none;
+    font-family: "Inter", sans-serif;
 }
 
-/* Section Experience */
+#experience ul li {
+    background: var(--cream);
+    margin: 20px 0px;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 8px var(--shadow);
+    border-left: 5px solid var(--earth);
+}
+
+.expHeader {
+    display: flex;
+    justify-content: space-between;
+}
+.expTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+.expDate {
+    color: var(--deep);
+}
+.expDescription {
+    margin-top: 15px;
+}
+
+/* Section Connect */
 #connect {
-    padding: 80px;
-    margin-bottom: 20px;
+    background: var(--slate);
+    margin-bottom: 0px;
+}
+
+#connect h2 {
+    color: var(--cream);
+    text-align: center;
 }
 
 #connect ul {
     list-style: none;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#connect ul li {
+    margin-top: 20px;
+}
+
+#connect ul li a {
+    text-decoration: none;
+    color: var(--cream);
+    background: var(--earth);
+    padding: 10px 30px;
+    border-radius: 15px;
 }

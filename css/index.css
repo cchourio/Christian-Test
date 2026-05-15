@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+}  
+
+:root {
+    --cream:   #f5f0e8;
+    --warm-bg: #ede7d9;
+    --earth:   #c4956a;   /* warm skin/brown from image */
+    --deep:    #7a5c42;   /* darker brown */
+    --slate:   #5a5d6e;   /* blue-grey from shirt */
+    --charcoal:#2a2b35;   /* near-black background from image */
+    --accent:  #c0553a;   /* editorial red accent */
+    --text:    #1c1a16;
+    --muted:   #8a8070;
+}
+
+body {
+    background: var(--warm-bg);
+}
+
+/* Section Nav */
+nav {
+    padding: 20px 0px;
+    background: var(--charcoal);
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+nav a{
+    text-decoration: none;
+    color: var(--cream);
+
+}
+
+/* Section Header */
+
+header {
+    background: var(--charcoal);
+    padding-top: 50px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerLine {
+    height: 2px;
+    width: 60px;
+    background: var(--earth);
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 50px;
+    color: var(--cream);
+}
+
+h2 {
+    color: var(--deep);
+    font-size: 30px;
+    border-bottom: 1px solid var(--deep);
+}
+
+/* Section about */
+#about {
+    padding: 80px;
+    margin-bottom: 20px;
+}
+
+/* Section Experience */
+#experience{
+    padding: 80px;
+    margin-bottom: 20px;
+}
+
+#experience ul {
+    list-style: none;
+}
+
+/* Section Experience */
+#connect {
+    padding: 80px;
+    margin-bottom: 20px;
+}
+
+#connect ul {
+    list-style: none;
+}

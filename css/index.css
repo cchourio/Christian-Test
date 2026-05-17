@@ -16,12 +16,19 @@
     --shadow:  #aeaeae;
 }
 
+html {
+    scrollbar-width: auto;
+    scrollbar-color: var(--earth) var(--cream); /* thumb track */
+}
+
 body {
     background: var(--warm-bg);
 }
 
 /* Section Nav */
 nav {
+    position: fixed;
+    width: 100%;
     padding: 20px 0px;
     background: var(--charcoal);
     font-family: "Inter", sans-serif;
@@ -48,7 +55,7 @@ nav a:hover {
 
 header {
     background: var(--charcoal);
-    padding-top: 80px;
+    padding-top: 120px;
     padding-bottom: 80px;
     display: flex;
     flex-direction: column;
@@ -77,8 +84,7 @@ h2 {
 
 section {
     padding: 80px;
-    margin-bottom: 20px; 
-    /* background: var(--slate); */
+    margin-bottom: 10px; 
 }
 
 .sectionLine {
@@ -128,6 +134,35 @@ section {
     margin-top: 15px;
 }
 
+/* Section Skills */
+
+#skills ul {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#skills ul li {
+    list-style: none;
+    background: var(--cream);
+    padding: 10px 20px;
+    border: 1px solid var(--earth);
+    border-radius: 15px;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    color: var(--deep);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#skills ul li:hover {
+    background: var(--earth);
+    border: 1px solid var(--earth);
+    color: var(--cream);
+}
+
 /* Section Connect */
 #connect {
     background: var(--slate);
@@ -157,4 +192,12 @@ section {
     background: var(--earth);
     padding: 10px 30px;
     border-radius: 15px;
+}
+
+/* Footer */
+footer {
+    background: var(--charcoal);
+    padding: 30px 0px;
+    color: var(--shadow);
+    text-align: center;
 }

@@ -251,11 +251,15 @@ section {
 
 /* Messages */
 #messages {
+    font-size: 18px;
     padding-top: 0px;
     padding-bottom: 20px;
 }
 
 #messages ul li{
+
+    display: flex;
+    flex-direction: column;
     list-style: none;
 
     background: var(--cream);
@@ -265,6 +269,43 @@ section {
     box-shadow: 0px 2px 8px var(--shadow);
     border-left: 5px solid var(--earth);
 }
+
+#messages ul li a {
+    text-decoration: none;
+    color: var(--earth);
+}
+
+#messages ul li a:hover {
+    text-decoration: none;
+    color: var(--deep);
+}
+
+#messages ul li span {
+    margin-top: 10px;
+}
+
+#messages ul li button {
+    font-size: 17px;
+    margin-top: 10px;
+    border: none;
+    border: 1px solid var(--accent);
+    border-radius: 55px;
+    color: var(--accent);
+    background: var(--cream);
+    padding: 10px 10px;
+    transition: all .2s;
+}
+
+#messages ul li button:hover {
+    margin-top: 10px;
+    border: none;
+    border: 1px solid var(--accent);
+    border-radius: 55px;
+    color: var(--cream);
+    background: var(--accent);
+    padding: 10px 10px;
+}
+
 /* Footer */
 footer {
     background: var(--charcoal);

@@ -1,4 +1,4 @@
-// Footer
+// Add Footer
 let date = new Date()
 let thisYear = date.getFullYear()
 
@@ -17,8 +17,9 @@ for (let i = 0; i < skills.length; i++) {
     skillsList.appendChild(skill)    
 }
 
-// Form
+// Add Form
 let form = document.querySelector('form')
+
 form.addEventListener('submit', function (event) {
     
     event.preventDefault();
@@ -27,10 +28,6 @@ form.addEventListener('submit', function (event) {
     let email = event.target.usersEmail.value
     let usersMessage = event.target.usersMessage.value
     
-    console.log('Name: '+name)
-    console.log('Name: '+email)
-    console.log('Name: '+usersMessage)
-
     // Display Message
     let messageList = document.querySelector('#messages ul')
     let newMessage = document.createElement('li')
@@ -39,18 +36,17 @@ form.addEventListener('submit', function (event) {
 
     messageList.appendChild(newMessage)
 
+    // Delete Message
     let removeButton = document.createElement('button')
     removeButton.innerHTML = 'Remove'
-    // removeButton.type = 'button'
 
     removeButton.addEventListener('click', function (event) {
         let entry = this.parentNode
-        console.log(entry);
         entry.remove()
     })
 
     newMessage.appendChild(removeButton)
 
-    // form.reset()
+    form.reset()
 })
 

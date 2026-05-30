@@ -27,10 +27,19 @@ body {
     background: var(--warm-bg);
 }
 
+img.headerImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
 /* Section Nav */
 nav {
-    position: fixed;
-    width: 100%;
+    /* position: fixed; */
+    /* width: 100%; */
     padding: 20px 0px;
     background: var(--charcoal);
     font-family: "Inter", sans-serif;
@@ -162,6 +171,44 @@ section {
 #skills ul li:hover {
     background: var(--earth);
     border: 1px solid var(--earth);
+    color: var(--cream);
+}
+
+/* Projects */
+#projects ul {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#projects ul li {
+    list-style: none;
+    background: var(--cream);
+    padding: 10px 20px;
+    border: 1px solid var(--earth);
+    border-radius: 15px;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    color: var(--deep);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#projects ul li:hover {
+    background: var(--earth);
+    border: 1px solid var(--earth);
+    color: var(--cream);
+}
+
+#projects ul li a {
+    transition: all 0.5s;
+    text-decoration: none;
+    color: var(--deep);
+}
+
+#projects ul li a:hover {
     color: var(--cream);
 }
 

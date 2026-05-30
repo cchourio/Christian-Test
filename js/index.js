@@ -50,3 +50,29 @@ form.addEventListener('submit', function (event) {
     form.reset()
 })
 
+// Async/await - Projects
+
+async function fetchRepos() {
+    try {
+        let response = await fetch('https://api.github.com/users/cchourio/repos')
+        
+        if(!response.ok){
+            throw new Error(response.status);
+        }
+
+        let data = await response.json()
+
+        let projectList = document.querySelector('#projects ul') 
+
+        data.forEach(element => {
+            let project = document.createElement('li')
+            project.innerHTML = `<a target="_black" href='${element.html_url}'>${element.name}</a>`
+            projectList.appendChild(project)
+        });
+
+    } catch (error) {
+        console.error('An eeror occurred',error)
+    }
+}
+
+fetchRepos()

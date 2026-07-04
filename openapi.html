@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open API</title>
+
+    <link rel="stylesheet" href="css/openapi.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">My API Project</a>
+    </nav>
+
+    <h1>🌤️ Weather Explorer</h1>
+
+    <form>
+        <select name="city">  
+            <option value="">Select City</option>
+            <option value="New York">New York</option>
+            <option value="Miami">Miami</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Atlanta">Atlanta</option>
+        </select>
+        <button type="submit" id="temperature">🌡️ Temperature</button>
+        <button type="submit" id="conditions">📅 7-Day Forecast</button>
+    </form>
+
+    <div id="result" style="display: none;">
+        <h2 id="cityName"></h2>
+        <p id="resultValue"></p>
+        <p id="resultSub"></p>
+        <div id="forecast" style="display: none;"></div>
+    </div>
+
+
+    <script src="js/openapi.js"></script>
+</body>
+</html>

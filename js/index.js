@@ -14,20 +14,20 @@ let skillsList = document.querySelector('#skills ul')
 for (let i = 0; i < skills.length; i++) {
     let skill = document.createElement('li')
     skill.innerHTML = skills[i]
-    skillsList.appendChild(skill)    
+    skillsList.appendChild(skill)
 }
 
 // Add Form
 let form = document.querySelector('form')
 
 form.addEventListener('submit', function (event) {
-    
+
     event.preventDefault();
 
     let name = event.target.usersName.value
     let email = event.target.usersEmail.value
     let usersMessage = event.target.usersMessage.value
-    
+
     // Display Message
     let messageList = document.querySelector('#messages ul')
     let newMessage = document.createElement('li')
@@ -55,14 +55,14 @@ form.addEventListener('submit', function (event) {
 async function fetchRepos() {
     try {
         let response = await fetch('https://api.github.com/users/cchourio/repos')
-        
-        if(!response.ok){
+
+        if (!response.ok) {
             throw new Error(response.status);
         }
 
         let data = await response.json()
 
-        let projectList = document.querySelector('#projects ul') 
+        let projectList = document.querySelector('#projects ul')
 
         data.forEach(element => {
             let project = document.createElement('li')
@@ -71,7 +71,7 @@ async function fetchRepos() {
         });
 
     } catch (error) {
-        console.error('An eeror occurred',error)
+        console.error('An eeror occurred', error)
     }
 }
 
